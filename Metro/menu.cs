@@ -17,32 +17,35 @@ namespace Metro
         public void main_menu()
         {
             //WIP
-            var hs = new Style(Color.Aqua);
-            var menu = AnsiConsole.Prompt(
-                new SelectionPrompt<string>()
-                .PageSize(10)
-                .HighlightStyle(hs)
-                .Title("Zadej linku")
-                .AddChoices(new[] { "A", "B", "C", "D", "Ukončit" }));
-            if (menu == "A")
+            while (true) 
             {
-                Ax();
-            }
-            else if (menu == "B")
-            {
-                Bx();
-            }
-            else if (menu == "C")
-            {
-                Cx();
-            }
-            else if (menu == "D")
-            {
-                Dx();
-            }
-            else if (menu == "Ukončit")
-            {
-                end_program();
+                var hs = new Style(Color.Aqua);
+                var menu = AnsiConsole.Prompt(
+                    new SelectionPrompt<string>()
+                    .PageSize(10)
+                    .HighlightStyle(hs)
+                    .Title("Zadej linku")
+                    .AddChoices(new[] { "A", "B", "C", "D", "Ukončit" }));
+                if (menu == "A")
+                {
+                    Ax();
+                }
+                else if (menu == "B")
+                {
+                    Bx();
+                }
+                else if (menu == "C")
+                {
+                    Cx();
+                }
+                else if (menu == "D")
+                {
+                    Dx();
+                }
+                else if (menu == "Ukončit")
+                {
+                    end_program();
+                }
             }
         }
         void Ax ()
@@ -59,14 +62,17 @@ namespace Metro
             if (menu == "Vypsat všechny stanice")
             {
                 linkaA.all_stations();
+                Thread.Sleep(6000);
             }
             else if (menu == "Vypsat první a poslední stanici")
             {
                 linkaA.first_last_station();
+                Thread.Sleep(2000);
             }
             else if (menu == "Spočítat cestu")
             {
                 linkaA.time();
+                Thread.Sleep(2000);
             }
         }
         void Bx ()
@@ -83,15 +89,19 @@ namespace Metro
             if (menu == "Vypsat všechny stanice")
             {
                 linkaB.all_stations();
+                Thread.Sleep(6000);
             }
             else if (menu == "Vypsat první a poslední stanici")
             {
                 linkaB.first_last_station();
+                Thread.Sleep(2000);
             }
             else if (menu == "Spočítat cestu")
             {
                 linkaB.time();
+                Thread.Sleep(2000);
             }
+
         }
         void Cx ()
         {
@@ -107,14 +117,17 @@ namespace Metro
             if (menu == "Vypsat všechny stanice")
             {
                 linkaC.all_stations();
+                Thread.Sleep(6000);
             }
             else if (menu == "Vypsat první a poslední stanici")
             {
                 linkaC.first_last_station();
+                Thread.Sleep(2000);
             }
             else if (menu == "Spočítat cestu")
             {
                 linkaC.time();
+                Thread.Sleep(2000);
             }
         }
         void Dx ()
@@ -131,14 +144,17 @@ namespace Metro
             if (menu == "Vypsat všechny stanice")
             {
                 linkaD.all_stations();
+                Thread.Sleep(6000);
             }
             else if (menu == "Vypsat první a poslední stanici")
             {
                 linkaD.first_last_station();
+                Thread.Sleep(2000);
             }
             else if (menu == "Spočítat cestu")
             {
                 linkaD.time();
+                Thread.Sleep(2000);
             }
         }
         void end_program ()
