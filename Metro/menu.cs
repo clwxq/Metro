@@ -9,31 +9,39 @@ namespace Metro
 {
     internal class menu
     {
-        //void name ()
-        //{
-        //    var hs = new Style(Color.Aqua);
-        //    var menu = AnsiConsole.Prompt(
-        //        new SelectionPrompt<string>()
-        //        .PageSize(10)
-        //        .HighlightStyle(hs)
-        //        .Title("Zadej linku")
-        //        .AddChoices(new[] { "A", "B", "C", "D" }));
-        //    if (menu == "A")
-        //    {
+        public void name()
+        {
+            var hs = new Style(Color.Aqua);
+            var menu = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                .PageSize(10)
+                .HighlightStyle(hs)
+                .Title("Zadej linku")
+                .AddChoices(new[] { "A", "B", "C", "D", "Ukončit" }));
+            if (menu == "A")
+            {
 
-        //    }
-        //    else if (menu == "B") 
-        //    {
-                
-        //    }
-        //    else if (menu == "C") 
-        //    {
-                
-        //    }
-        //    else if (menu == "D")
-        //    {
+            }
+            else if (menu == "B")
+            {
 
-        //    }
-        //}
+            }
+            else if (menu == "C")
+            {
+
+            }
+            else if (menu == "D")
+            {
+
+            }
+            else if (menu == "Ukončit")
+            {
+
+            }
+        }
+        void a ()
+        {
+
+        }
     }
 }

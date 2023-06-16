@@ -25,7 +25,7 @@ var menu = AnsiConsole.Prompt(
     .PageSize(10)
     .HighlightStyle(hs)
     .Title("Zadej linku")
-    .AddChoices(new[] { "A", "B", "C", "D" }));
+    .AddChoices(new[] { "A", "B", "C", "D", "Ukončit" }));
 if (menu == "A")
 {
     LinkaMetra linkaA = new LinkaMetra()
@@ -117,4 +117,8 @@ else if (menu == "D")
     {
         linkaD.time();
     }
+}
+else if (menu == "Ukončit")
+{
+    System.Environment.Exit(0);
 }
