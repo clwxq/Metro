@@ -54,49 +54,96 @@ namespace Metro
         }
         public void timeA()
         {
-            all_stations();
-            Console.WriteLine("stanice 1");
-            string prvi = Console.ReadLine();
-            int indexprvi = Array.IndexOf(stations, prvi);
-            Console.WriteLine("stanice 2");
-            string druhy = Console.ReadLine();
-            int indexdruhy = Array.IndexOf(stations, druhy);
-            Console.WriteLine($"{(indexdruhy - indexprvi) * 2} minut");
-
             var hs = new Style(Color.Aqua);
             var menu = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
                 .PageSize(10)
                 .HighlightStyle(hs)
-                .Title("Vyber linku 1")
+                .Title("Vyber stanici 1")
                 .AddChoices(new[] { "Depo Hostivař", "Skalka", "Strašnická", "Želivského", "Flora", "Jiřího z Poděbrad",
             "Náměstí Míru", "Muzeum", "Můstek", "Staroměstská", "Malostranská", "Hradčanská", "Dejvická",
             "Bořislavka", "Nádraží Veleslavín", "Petřiny", "Nemocnice Motol" }));
+            int st = Array.IndexOf(stations, menu);
+            menu = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                .PageSize(10)
+                .HighlightStyle(hs)
+                .Title("Vyber stanici 2")
+                .AddChoices(new[] { "Depo Hostivař", "Skalka", "Strašnická", "Želivského", "Flora", "Jiřího z Poděbrad",
+            "Náměstí Míru", "Muzeum", "Můstek", "Staroměstská", "Malostranská", "Hradčanská", "Dejvická",
+            "Bořislavka", "Nádraží Veleslavín", "Petřiny", "Nemocnice Motol" }));
+            int nd = Array.IndexOf(stations, menu);
+            Console.WriteLine($"{(nd - st) * 2} minut/a/y");
         }
         public void timeB()
         {
-
+            var hs = new Style(Color.Aqua);
+            var menu = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                .PageSize(10)
+                .HighlightStyle(hs)
+                .Title("Vyber stanici 1")
+                .AddChoices(new[] { "Zličín", "Stodůlky", "Luka", "Lužiny", "Hůrka", "Nové Butovice", "Jinonice",
+            "Radlická", "Smíchovské nádraží", "Anděl", "Karlovo náměstí", "Národní třída", "Můstek",
+            "Náměstí republiky", "Florenc", "Křižíkova", "Invalidovna", "Palmovka", "Českomoravská",
+            "Vysočanská", "Kolbenova", "Hloubětín", "Rajská zahrada", "Černý most" }));
+            int st = Array.IndexOf(stations, menu);
+            menu = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                .PageSize(10)
+                .HighlightStyle(hs)
+                .Title("Vyber stanici 2")
+                .AddChoices(new[] { "Zličín", "Stodůlky", "Luka", "Lužiny", "Hůrka", "Nové Butovice", "Jinonice",
+            "Radlická", "Smíchovské nádraží", "Anděl", "Karlovo náměstí", "Národní třída", "Můstek",
+            "Náměstí republiky", "Florenc", "Křižíkova", "Invalidovna", "Palmovka", "Českomoravská",
+            "Vysočanská", "Kolbenova", "Hloubětín", "Rajská zahrada", "Černý most" }));
+            int nd = Array.IndexOf(stations, menu);
+            Console.WriteLine($"{(nd - st) * 2} minut/a/y");
         }
         public void timeC()
         {
-
+            var hs = new Style(Color.Aqua);
+            var menu = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                .PageSize(10)
+                .HighlightStyle(hs)
+                .Title("Vyber stanici 1")
+                .AddChoices(new[] { "Letňany", "Prosek", "Střížkov", "Ládví", "Kobylisy", "Nádraží Holešovice",
+            "Vltavská", "Florenc", "Hlavní nádraží", "Muzeum","I. P. Pavlova", "Vyšehrad", "Pražského povstání",
+            "Pankrác", "Budějovická", "Kačerov", "Roztyly", "Chodov", "Opatov", "Háje" }));
+            int st = Array.IndexOf(stations, menu);
+            menu = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                .PageSize(10)
+                .HighlightStyle(hs)
+                .Title("Vyber stanici 2")
+                .AddChoices(new[] { "Letňany", "Prosek", "Střížkov", "Ládví", "Kobylisy", "Nádraží Holešovice",
+            "Vltavská", "Florenc", "Hlavní nádraží", "Muzeum","I. P. Pavlova", "Vyšehrad", "Pražského povstání",
+            "Pankrác", "Budějovická", "Kačerov", "Roztyly", "Chodov", "Opatov", "Háje" }));
+            int nd = Array.IndexOf(stations, menu);
+            Console.WriteLine($"{(nd - st) * 2} minut/a/y");
         }
         public void timeD()
         {
-
+            var hs = new Style(Color.Aqua);
+            var menu = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                .PageSize(10)
+                .HighlightStyle(hs)
+                .Title("Vyber stanici 1")
+                .AddChoices(new[] { "Depo Písnice", "Písnice", "Libuš", "Nové Dvory", "Nemocnice Krč", "Nádraží Krč",
+            "Olbrachtova", "Pankrác", "Náměstí Bratří Synků", "Náměstí Míru" }));
+            int st = Array.IndexOf(stations, menu);
+            menu = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                .PageSize(10)
+                .HighlightStyle(hs)
+                .Title("Vyber stanici 2")
+                .AddChoices(new[] { "Depo Písnice", "Písnice", "Libuš", "Nové Dvory", "Nemocnice Krč", "Nádraží Krč",
+            "Olbrachtova", "Pankrác", "Náměstí Bratří Synků", "Náměstí Míru" }));
+            int nd = Array.IndexOf(stations, menu);
+            Console.WriteLine($"{(nd - st) * 2} minut/a/y");
         }
-        string[] Ay = { "Depo Hostivař", "Skalka", "Strašnická", "Želivského", "Flora", "Jiřího z Poděbrad",
-            "Náměstí Míru", "Muzeum", "Můstek", "Staroměstská", "Malostranská", "Hradčanská", "Dejvická",
-            "Bořislavka", "Nádraží Veleslavín", "Petřiny", "Nemocnice Motol" };
-
-        string[] By = { "Zličín", "Stodůlky", "Luka", "Lužiny", "Hůrka", "Nové Butovice", "Jinonice",
-            "Radlická", "Smíchovské nádraží", "Anděl", "Karlovo náměstí", "Národní třída", "Můstek",
-            "Náměstí republiky", "Florenc", "Křižíkova", "Invalidovna", "Palmovka", "Českomoravská",
-            "Vysočanská", "Kolbenova", "Hloubětín", "Rajská zahrada", "Černý most" };
-
-        string[] Cy = { "Letňany", "Prosek", "Střížkov", "Ládví", "Kobylisy", "Nádraží Holešovice",
-            "Vltavská", "Florenc", "Hlavní nádraží", "Muzeum","I. P. Pavlova", "Vyšehrad", "Pražského povstání",
-            "Pankrác", "Budějovická", "Kačerov", "Roztyly", "Chodov", "Opatov", "Háje" };
 
         string[] Dy = { "Depo Písnice", "Písnice", "Libuš", "Nové Dvory", "Nemocnice Krč", "Nádraží Krč",
             "Olbrachtova", "Pankrác", "Náměstí Bratří Synků", "Náměstí Míru" };
