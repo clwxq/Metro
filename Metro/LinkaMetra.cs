@@ -53,6 +53,8 @@ namespace Metro
         }
         public void time ()
         {
+            //WIP
+
             //all_stations();
             //var station_menu = AnsiConsole.Prompt(
             //new MultiSelectionPrompt<string>()
