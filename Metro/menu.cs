@@ -169,18 +169,21 @@ namespace Metro
             {
                 linkaD.all_stations();
                 Thread.Sleep(6000);
+                Console.Clear();
                 action();
             }
             else if (menu == "Vypsat první a poslední stanici")
             {
                 linkaD.first_last_station();
                 Thread.Sleep(2000);
+                Console.Clear();
                 action();
             }
             else if (menu == "Spočítat cestu")
             {
                 linkaD.time();
                 Thread.Sleep(2000);
+                Console.Clear();
                 action();
             }
             else if (menu == "Zpět")
