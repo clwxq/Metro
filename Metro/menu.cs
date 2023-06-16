@@ -58,7 +58,7 @@ namespace Metro
             .PageSize(10)
             .HighlightStyle(hs)
             .Title("vyber")
-            .AddChoices(new[] { "Vypsat všechny stanice", "Vypsat první a poslední stanici", "Spočítat cestu" }));
+            .AddChoices(new[] { "Vypsat všechny stanice", "Vypsat první a poslední stanici", "Spočítat cestu", "Zpět", "Ukončit" }));
             if (menu == "Vypsat všechny stanice")
             {
                 linkaA.all_stations();
@@ -74,6 +74,14 @@ namespace Metro
                 linkaA.time();
                 Thread.Sleep(2000);
             }
+            else if (menu == "Zpět")
+            {
+                back();
+            }
+            else if (menu == "Ukončit")
+            {
+                end_program();
+            }
         }
         void Bx ()
         {
@@ -85,7 +93,7 @@ namespace Metro
             .PageSize(10)
             .HighlightStyle(hs)
             .Title("vyber")
-            .AddChoices(new[] { "Vypsat všechny stanice", "Vypsat první a poslední stanici", "Spočítat cestu" }));
+            .AddChoices(new[] { "Vypsat všechny stanice", "Vypsat první a poslední stanici", "Spočítat cestu", "Zpět", "Ukončit" }));
             if (menu == "Vypsat všechny stanice")
             {
                 linkaB.all_stations();
@@ -101,6 +109,14 @@ namespace Metro
                 linkaB.time();
                 Thread.Sleep(2000);
             }
+            else if (menu == "Zpět")
+            {
+                back();
+            }
+            else if (menu == "Ukončit")
+            {
+                end_program();
+            }
 
         }
         void Cx ()
@@ -113,7 +129,7 @@ namespace Metro
             .PageSize(10)
             .HighlightStyle(hs)
             .Title("vyber")
-            .AddChoices(new[] { "Vypsat všechny stanice", "Vypsat první a poslední stanici", "Spočítat cestu" }));
+            .AddChoices(new[] { "Vypsat všechny stanice", "Vypsat první a poslední stanici", "Spočítat cestu", "Zpět", "Ukončit" }));
             if (menu == "Vypsat všechny stanice")
             {
                 linkaC.all_stations();
@@ -129,6 +145,14 @@ namespace Metro
                 linkaC.time();
                 Thread.Sleep(2000);
             }
+            else if (menu == "Zpět")
+            {
+                back();
+            }
+            else if (menu == "Ukončit")
+            {
+                end_program();
+            }
         }
         void Dx ()
         {
@@ -140,26 +164,41 @@ namespace Metro
             .PageSize(10)
             .HighlightStyle(hs)
             .Title("vyber")
-            .AddChoices(new[] { "Vypsat všechny stanice", "Vypsat první a poslední stanici", "Spočítat cestu" }));
+            .AddChoices(new[] { "Vypsat všechny stanice", "Vypsat první a poslední stanici", "Spočítat cestu", "Zpět", "Ukončit" }));
             if (menu == "Vypsat všechny stanice")
             {
                 linkaD.all_stations();
                 Thread.Sleep(6000);
+                action();
             }
             else if (menu == "Vypsat první a poslední stanici")
             {
                 linkaD.first_last_station();
                 Thread.Sleep(2000);
+                action();
             }
             else if (menu == "Spočítat cestu")
             {
                 linkaD.time();
                 Thread.Sleep(2000);
+                action();
+            }
+            else if (menu == "Zpět")
+            {
+                back();
+            }
+            else if (menu == "Ukončit")
+            {
+                end_program();
             }
         }
         void end_program ()
         {
             System.Environment.Exit (0);
+        }
+        void back ()
+        {
+            main_menu();
         }
         public void linky ()
         {
@@ -182,6 +221,24 @@ namespace Metro
             b = By;
             c = Cy;
             d = Dy;
+        }
+        public void action ()
+        {
+            var hs = new Style(Color.Aqua);
+            var menu = AnsiConsole.Prompt(
+            new SelectionPrompt<string>()
+            .PageSize(10)
+            .HighlightStyle(hs)
+            .Title("vyber")
+            .AddChoices(new[] { "Zpět do menu", "Ukončit" }));
+            if (menu == "Zpět do menu") 
+            {
+                back();
+            }
+            else if (menu == "Ukončit")
+            {
+                end_program();
+            }
         }
     }
 }

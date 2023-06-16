@@ -9,6 +9,7 @@ namespace Metro
 {
     internal class LinkaMetra
     {
+        menu mainmenu = new menu();
         public string name { get; set; }
         public bool active { get; set; }
         public string[] stations { get; set; }
