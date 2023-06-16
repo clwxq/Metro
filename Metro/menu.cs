@@ -75,7 +75,7 @@ namespace Metro
             }
             else if (menu == "Spočítat cestu")
             {
-                linkaA.time();
+                linkaA.timeA();
                 Thread.Sleep(2000);
                 Console.Clear();
                 action();
@@ -116,7 +116,7 @@ namespace Metro
             }
             else if (menu == "Spočítat cestu")
             {
-                linkaB.time();
+                linkaB.timeB();
                 Thread.Sleep(2000);
                 Console.Clear();
                 action();
@@ -158,7 +158,7 @@ namespace Metro
             }
             else if (menu == "Spočítat cestu")
             {
-                linkaC.time();
+                linkaC.timeC();
                 Thread.Sleep(2000);
                 Console.Clear();
                 action();
@@ -199,7 +199,7 @@ namespace Metro
             }
             else if (menu == "Spočítat cestu")
             {
-                linkaD.time();
+                linkaD.timeD();
                 Thread.Sleep(2000);
                 Console.Clear();
                 action();

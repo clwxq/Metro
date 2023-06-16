@@ -24,7 +24,7 @@ namespace Metro
             }
             AnsiConsole.Write(table);
         }
-        public void first_last_station ()
+        public void first_last_station()
         {
             var table = new Table();
             table.AddColumn("první").Centered();
@@ -32,7 +32,7 @@ namespace Metro
             table.AddRow(stations[0], stations[stations.Length - 1]);
             AnsiConsole.Write(table);
         }
-        public void station_settings ()
+        public void station_settings()
         {
             if (color_metro == "zelená")
             {
@@ -50,27 +50,10 @@ namespace Metro
             {
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
             }
-            Console.WriteLine($"linka { name }");
+            Console.WriteLine($"linka {name}");
         }
-        public void time ()
+        public void timeA()
         {
-            //WIP
-
-            //all_stations();
-            //var station_menu = AnsiConsole.Prompt(
-            //new MultiSelectionPrompt<string>()
-            //.Title("Vyber si stanici")
-            //.NotRequired()
-            //.PageSize(10)
-            //.MoreChoicesText("Pro více možností použí šipky (nahoru/dolu)")
-            //.InstructionsText(
-            //"[grey](Press [blue]<space>[/] to toggle a fruit, " +
-            //"[green]<enter>[/] to accept)[/]")
-            //.AddChoices(new[] { "" }));
-            //foreach (string station in station_menu)
-            //{
-            //    AnsiConsole.WriteLine(station);
-            //}
             all_stations();
             Console.WriteLine("stanice 1");
             string prvi = Console.ReadLine();
@@ -78,7 +61,44 @@ namespace Metro
             Console.WriteLine("stanice 2");
             string druhy = Console.ReadLine();
             int indexdruhy = Array.IndexOf(stations, druhy);
-            Console.WriteLine($"{(indexdruhy-indexprvi)*2} minut");
+            Console.WriteLine($"{(indexdruhy - indexprvi) * 2} minut");
+
+            var hs = new Style(Color.Aqua);
+            var menu = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                .PageSize(10)
+                .HighlightStyle(hs)
+                .Title("Vyber linku 1")
+                .AddChoices(new[] { "Depo Hostivař", "Skalka", "Strašnická", "Želivského", "Flora", "Jiřího z Poděbrad",
+            "Náměstí Míru", "Muzeum", "Můstek", "Staroměstská", "Malostranská", "Hradčanská", "Dejvická",
+            "Bořislavka", "Nádraží Veleslavín", "Petřiny", "Nemocnice Motol" }));
         }
+        public void timeB()
+        {
+
+        }
+        public void timeC()
+        {
+
+        }
+        public void timeD()
+        {
+
+        }
+        string[] Ay = { "Depo Hostivař", "Skalka", "Strašnická", "Želivského", "Flora", "Jiřího z Poděbrad",
+            "Náměstí Míru", "Muzeum", "Můstek", "Staroměstská", "Malostranská", "Hradčanská", "Dejvická",
+            "Bořislavka", "Nádraží Veleslavín", "Petřiny", "Nemocnice Motol" };
+
+        string[] By = { "Zličín", "Stodůlky", "Luka", "Lužiny", "Hůrka", "Nové Butovice", "Jinonice",
+            "Radlická", "Smíchovské nádraží", "Anděl", "Karlovo náměstí", "Národní třída", "Můstek",
+            "Náměstí republiky", "Florenc", "Křižíkova", "Invalidovna", "Palmovka", "Českomoravská",
+            "Vysočanská", "Kolbenova", "Hloubětín", "Rajská zahrada", "Černý most" };
+
+        string[] Cy = { "Letňany", "Prosek", "Střížkov", "Ládví", "Kobylisy", "Nádraží Holešovice",
+            "Vltavská", "Florenc", "Hlavní nádraží", "Muzeum","I. P. Pavlova", "Vyšehrad", "Pražského povstání",
+            "Pankrác", "Budějovická", "Kačerov", "Roztyly", "Chodov", "Opatov", "Háje" };
+
+        string[] Dy = { "Depo Písnice", "Písnice", "Libuš", "Nové Dvory", "Nemocnice Krč", "Nádraží Krč",
+            "Olbrachtova", "Pankrác", "Náměstí Bratří Synků", "Náměstí Míru" };
     }
 }
