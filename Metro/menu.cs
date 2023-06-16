@@ -98,16 +98,22 @@ namespace Metro
             {
                 linkaB.all_stations();
                 Thread.Sleep(6000);
+                Console.Clear();
+                action();
             }
             else if (menu == "Vypsat první a poslední stanici")
             {
                 linkaB.first_last_station();
                 Thread.Sleep(2000);
+                Console.Clear();
+                action();
             }
             else if (menu == "Spočítat cestu")
             {
                 linkaB.time();
                 Thread.Sleep(2000);
+                Console.Clear();
+                action();
             }
             else if (menu == "Zpět")
             {
@@ -134,16 +140,22 @@ namespace Metro
             {
                 linkaC.all_stations();
                 Thread.Sleep(6000);
+                Console.Clear();
+                action();
             }
             else if (menu == "Vypsat první a poslední stanici")
             {
                 linkaC.first_last_station();
                 Thread.Sleep(2000);
+                Console.Clear();
+                action();
             }
             else if (menu == "Spočítat cestu")
             {
                 linkaC.time();
                 Thread.Sleep(2000);
+                Console.Clear();
+                action();
             }
             else if (menu == "Zpět")
             {
